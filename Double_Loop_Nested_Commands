@@ -1,0 +1,18 @@
+#!/bin/bash
+#A shell script to print each number five times.
+for (( i = 6; i <= 7; i++ ))      ### Outer for loop ###
+do
+        echo -e " NSLookup Status\n "
+        echo -e " ####################\n "
+        date
+        for (( j = 1 ; j <= 255; j++ )) ### Inner for loop ###
+        do
+                echo -e " NSLookup Status\n "
+                echo -e " ####################\n "
+                echo -e " NSLookup Of 192.168.$i.$j\n "
+                echo -e " ####################\n "
+                nslookup 192.168.$i.$j
+                sleep 10
+        done
+        echo -e " #### NSLOOKUP 192.168.1.1/24 Subnet ### "
+done
